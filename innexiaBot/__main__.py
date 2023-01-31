@@ -72,7 +72,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-INNEXIA_IMG = ""
+INNEXIA_IMG = "https://te.legra.ph/file/46e5c855c17a2111fe3e8.jpg"
 
 PM_START_TEXT = """
 `Heya` 🤗 `I am` **𝗘𝗠𝗠𝗔** `your group super bot`
@@ -85,7 +85,7 @@ buttons = [
             text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="🔥 Sᴏᴜʀᴄᴇ", url=f""),
+        InlineKeyboardButton(text="🔥 Sᴏᴜʀᴄᴇ", url=f"https://te.legra.ph/file/5cb8593eb04ff428fba14.jpg"),
         InlineKeyboardButton(
             text="𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧", url=f"https://t.me/jocastasupportchat"
         ),
@@ -109,7 +109,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @SiderzDonate's 💕"""
+ @hunter_is_back's 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -224,7 +224,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/SiderzChat")]]
+                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/jocastasupportchat")]]
             ),
         )
         
@@ -356,8 +356,8 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" 𝗜𝗡𝗡𝗘𝗫𝗜𝗔 - A bot to manage your groups with additional features!
-            \nHere's the basic help regarding use of Innexia.
+            text=""" **𝗘𝗠𝗠𝗔** - A bot to manage your groups with additional features!
+            \nHere's the basic help regarding use of emma.
             
             \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
             \nReport error/bugs click the Button""",
@@ -367,10 +367,10 @@ def innexia_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Bᴜɢ'ꜱ", url="t.me/SiderzChat"
+                            text="Bᴜɢ'ꜱ", url="t.me/hunter_is_back"
                         ),
                         InlineKeyboardButton(
-                            text="Bᴏᴛ Lɪꜱᴛ", url="t.me/SiderzBot/11"
+                            text="𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗖𝗛𝗔𝗧", url="t.me/jocastasupportchat"
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="innexia_back")],
@@ -391,7 +391,7 @@ def innexia_about_callback(update, context):
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache@InnexiaBot` in that chat to refresh admin list in My database.\n"
+            f"\n• Than send `/admincache@miss_emma_robot` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -449,12 +449,12 @@ def innexia_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/InnexiaLogs"),
-                    InlineKeyboardButton(text="Fᴇᴅ", url="t.me/SiderzFedChat"),
+                    InlineKeyboardButton(text="Lᴏɢ'ꜱ", url="t.me/jocastasupportchat"),
+                    InlineKeyboardButton(text="Fᴇᴅ", url="t.me/jocastasupportchat"),
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/SiderzChat"),
-                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/SiderzBot"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/jocastasupportchat"),
+                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/jocastasupportchat"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
@@ -465,18 +465,18 @@ def innexia_about_callback(update, context):
         )
     elif query.data == "innexia_credit":
         query.message.edit_text(
-            text=f"<b> CREDIT FOR INNEXIA DEV'S</b>\n"
-            f"\nHere Some Developers Helping in Making The Innexia Bot",
+            text=f"<b> CREDIT FOR emma DEV'S</b>\n"
+            f"\nHere Some Developers Helping in Making The EMMA Bot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Sᴀᴍᴍʏ", url="t.me/useIes"),
-                    InlineKeyboardButton(text="Bʟᴀᴢᴇ", url="t.me/piroXpower"),
+                    InlineKeyboardButton(text="😎", url="t.me/the_brotherhood_council"),
+                    InlineKeyboardButton(text="❤️‍🔥", url="t.me/jocastasupportchat"),
                  ],
                  [
-                    InlineKeyboardButton(text="Iɴꜰɪɴɪᴛʏ", url="t.me/hell_king_infinity"),
-                    InlineKeyboardButton(text="Zᴀʟɪᴍ", url="https://t.me/Jalim_Munda"),
+                    InlineKeyboardButton(text="🔱", url="t.me/India_United"),
+                    InlineKeyboardButton(text="😈", url="https://t.me/jocastasupportchat"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
@@ -492,8 +492,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Innexia*
-                 \nHere is the [🔥Source Code🔥](https://github.com/DarkCybers/innexiaBot) .""",
+            text=""" Hi..😻 I'm ***𝗘𝗠𝗠𝗔***
+                 \nHere is the [🔥Source Code🔥](https://te.legra.ph/file/46e5c855c17a2111fe3e8.jpg) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -746,7 +746,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1947924017 and DONATION_LINK:
+        if OWNER_ID != 5331427205 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -794,7 +794,19 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I Aᴍ Aʟɪᴠᴇ 🔥")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}",
+                                       video="https://te.legra.ph/file/7facdcd3e1033adb73eec.mp4",
+                                       "
+                                                     caption=f"""
+ㅤ🥀 {BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ...
+
+┏•❅────✧❅✦❅✧────❅•┓
+ㅤ★ **ᴘʏᴛʜᴏɴ :** `{y()}`
+ㅤ★ **ʟɪʙʀᴀʀʏ :** `{telever}`
+ㅤ★ **ᴛᴇʟᴇᴛʜᴏɴ :** `{tlhver}`
+ㅤ★ **ᴩʏʀᴏɢʀᴀᴍ :** `{pyrover}`
+┗•❅────✧❅✦❅✧────❅•┛""",
+                                       ")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
